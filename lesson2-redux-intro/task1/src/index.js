@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { createStore } from 'redux';
 
 const INCREMENT = 'COUNTER/INCREMENT';
 const DECREMENT = 'COUNTER/DECREMENT';
@@ -26,6 +26,6 @@ const counterReducer = (state = 0, action) => {
   }
 };
 
-const store = configureStore({ reducer: counterReducer });
+const store = createStore(counterReducer);
 
 export default store;
