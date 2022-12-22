@@ -6,7 +6,7 @@ const userReducer = (state = null, action) => {
       return action.payload.userData;
 
     case REMOVE_USER: {
-      return '';
+      return null;
     }
     default:
       return state;
