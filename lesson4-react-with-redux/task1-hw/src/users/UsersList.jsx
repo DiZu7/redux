@@ -6,6 +6,7 @@ import User from './User';
 import * as usersAction from './users.action';
 
 class UsersList extends React.Component {
+	
   getPaginatedData = data => {
     const startIndex = this.props.currentPage * 3 - 3;
     const endIndex = startIndex + 3;
@@ -36,7 +37,7 @@ class UsersList extends React.Component {
 const mapState = state => {
   return {
     users: state.users.usersList,
-    currentPage: state.users.currentPage,
+    currentPage: state.users.currentPage + 1,
   };
 };
 

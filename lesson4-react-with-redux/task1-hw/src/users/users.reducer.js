@@ -6,12 +6,6 @@ const initialState = {
   currentPage: 0,
 };
 
-// const getPaginatedData = (data, state) => {
-//   const startIndex = state.currentPage * 3 - 3;
-//   const endIndex = startIndex + 3;
-//   return data.slice(startIndex, endIndex);
-// };
-
 const usersReducer = (state = initialState, action) => {
   switch (action.type) {
     case GO_NEXT: {
@@ -28,10 +22,7 @@ const usersReducer = (state = initialState, action) => {
       };
     }
     default:
-      return {
-        ...state,
-        currentPage: 1,
-      };
+      return state;
   }
 };
 
