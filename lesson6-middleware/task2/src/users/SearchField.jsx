@@ -15,7 +15,6 @@ class SearchField extends React.Component {
   };
 
   handleUserSearch = () => {
-    this.props.showSpinner();
     this.props.fetchUserData(this.state.userName);
   };
   render() {
@@ -35,13 +34,9 @@ class SearchField extends React.Component {
   }
 }
 
-// const mapState = state => {
-//
-// };
+
 
 const mapDispatch = {
-  showSpinner: usersActions.showSpinner,
-  userDataRecieved: usersActions.userDataRecieved,
   fetchUserData: usersActions.fetchUserData,
 };
 
