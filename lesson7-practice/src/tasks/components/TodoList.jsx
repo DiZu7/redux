@@ -25,6 +25,14 @@ const TodoList = ({ tasks, getTasksList, createTask, deleteTask, updateTask }) =
   );
 };
 
+TodoList.propTypes = {
+  tasks: PropTypes.arrayOf(PropTypes.shape()),
+  getTasksList: PropTypes.func.isRequired,
+  createTask: PropTypes.func.isRequired,
+  deleteTask: PropTypes.func.isRequired,
+  updateTask: PropTypes.func.isRequired,
+};
+
 const mapState = state => {
   return {
     tasks: sortedTasksListSelector(state),
