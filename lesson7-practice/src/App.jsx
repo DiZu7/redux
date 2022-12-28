@@ -1,14 +1,14 @@
 import React from 'react';
 import './index.scss';
-// import { Provider } from 'react-redux';
-// import store from './store.js';
+import { Provider } from 'react-redux';
+import store from './store.js';
 import TodoList from './tasks/components/TodoList';
 
 const App = () => {
   return (
-    // <Provider store={store}>
-    <TodoList />
-    // </Provider>
+    <Provider store={store}>
+      <TodoList />
+    </Provider>
   );
 };
 
