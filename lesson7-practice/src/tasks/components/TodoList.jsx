@@ -4,6 +4,8 @@ import TasksList from './TasksList';
 import { connect } from 'react-redux';
 import * as tasksActions from '../tasks.actions';
 import { sortedTasksListSelector } from '../tasks.selectors';
+import PropTypes from 'prop-types';
+
 
 const TodoList = ({ tasks, getTasksList, createTask, deleteTask, updateTask }) => {
   useEffect(() => {
